@@ -20,10 +20,12 @@ const app = express();
 // Podpowiedź: app.set(...);
 // Zarejestruj "views" jako "views".
 // Podpowiedź: app.set(...);
-
+app.set('view engine', 'ejs');
 // 🔧 Configo the Setter
 // Ustaw publiczny katalog plików statycznych w middleware.
 // Podpowiedź: app.use(express.static(...));
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 

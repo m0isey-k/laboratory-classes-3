@@ -1,12 +1,14 @@
 <html>
   <head>
-    <title>Shop - Add product</title>
+    <title><%= headTitle %></title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <main>
     <!-- 🏗 Structo the Builder -->
     <!-- Wykorzystaj odpowiednią składnię EJS do odpowiednich zadań. -->
     <!-- Podpowiedź: <%- include(..., { menuLinks: ..., activeLinkPath: ... }); %> -->
-    <h1>Add product</h1>
+    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>    <h1>Add product</h1>
     <form action="/product/add" method="POST">
     <form action="/product/add" method="POST">
       <br />
@@ -24,5 +26,6 @@
       <br />
       <button type="submit">Add</button>
     </form>
+    </main>
   </body>
 </html>

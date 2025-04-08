@@ -2,6 +2,7 @@ const renderNewProductPage = (data) => {
   return `
     <html>
         <body>
+          <main>
             <head><title>Shop - Newest product</title></head>
             <nav>
                 <a href='/'>Home</a>
@@ -14,6 +15,7 @@ const renderNewProductPage = (data) => {
                 ? `<br /><div>New product data - ${data}</div>`
                 : "<br /><div>No new products available.</div>"
             }
+          </main>
         </body>
     </html>
     `;
