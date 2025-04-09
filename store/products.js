@@ -1,6 +1,6 @@
 // 🏗 Structo the Builder
 // Stwórz stałą productsSlice.
 // Podpowiedź: const someSlice = { propertyA: {}, propertyB: [] };
-const productsSlice = { newestproduct: {}, products: [] };
+const productSlice = {newestProduct: {}, products: []}
 
-module.exports = { productSlice };
+module.exports = productSlice;

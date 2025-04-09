@@ -3,8 +3,29 @@
 <!-- Podpowiedź: <% if (products?.length > 0) { %> -->
 <!-- Podpowiedź: ... -->
 <!-- Podpowiedź: <% } %> -->
-
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <title><%= headTitle %></title>
+  </head>
+  <body>
+  <main>
+    <h1 class="heading">Products</h1>
+    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
+    <% if (products?.length > 0) { %>
+    <ul>
+    <% products.forEach(product => { %>
+        <li>Name: <%= product.name %>, Description: <%= product.description %></li>
+    <% }); %>
+    </ul>
+    <% } else {%>
+    <div>No products available.</div>
+    <% } %>
+  </main>
+  </body>
+</html>
 <!-- Wykorzystaj odpowiednią składnię EJS do iteracyjnego zwracania elementów HTML. -->
 <!-- Podpowiedź: <% products.forEach(product => { %> -->
 <!-- Podpowiedź: ... -->
 <!-- Podpowiedź: <% }); %> -->
+

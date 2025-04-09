@@ -3,13 +3,14 @@
     <!-- 🏗 Structo the Builder -->
     <!-- Wykorzystaj odpowiednią składnię EJS do odpowiednich zadań. -->
     <!-- Podpowiedź: <title><%= headTitle %> -->
+    <link rel="stylesheet" href="/css/main.css" />
     <title><%= headTitle %></title>
-    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>    <main>
-    <h1>404 - Not Found</h1>
-    </main>
+  <main>
+    <h1 class="heading">404 - Not Found</h1>
+    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
+    
+  </main>
   </body>
 </html>
-
